@@ -1,0 +1,14 @@
+
+<button (click)="onClick()">Display Details</button><br>
+<p *ngIf="showAndHide; else noPass">{{password}}</p>
+<ng-template #noPass>
+  <p>  </p>
+</ng-template>
+
+<div *ngFor="let number of array">
+  <p [ngStyle]="{backgroundColor:getColor(number)}">{{number}}</p>
+</div>
+<hr><hr>
+<div *ngFor="let number1 of array1">
+  <p [ngStyle]="{backgroundColor:getColor1(number1)}">{{number1}}</p>
+</div>
